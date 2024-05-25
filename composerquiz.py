@@ -76,7 +76,7 @@ def search_tracks(query, access_token) -> list:
         'Authorization': f'Bearer {access_token}' 
     }
     params = {
-        'q': f'{query}',
+        'q': query,
         'type': 'track'
     }
     response = requests.get(search_url, headers=headers, params=params)
